@@ -3,6 +3,7 @@ package net.xdclass.controller;
 import com.google.code.kaptcha.Producer;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
@@ -71,31 +72,26 @@ public class NotifyController {
     }
 
     /**
-     * 发送验证码
+     * 支持手机号、邮箱发送验证码
      *
-     * @param to
-     * @param captcha
      * @return
      */
-    @ApiOperation("发送邮箱验证码")
+    @ApiOperation("发送验证码")
     @GetMapping("send_code")
-    public JsonData sendRegisterCode(@RequestParam String to,
-                                     @RequestParam String captcha,
+    public JsonData sendRegisterCode(@ApiParam("收信人") @RequestParam(value = "to", required = true) String to,
+                                     @ApiParam("图形验证码") @RequestParam(value = "captcha", required = true) String captcha,
                                      HttpServletRequest request) {
 
         String key = getCaptchaKey(request);
         String cacheCaptcha = redisTemplate.opsForValue().get(key);
 
-        if (captcha != null && cacheCaptcha != null && captcha.equalsIgnoreCase(cacheCaptcha)) {
-
+        if (captcha != null && cacheCaptcha != null && cacheCaptcha.equalsIgnoreCase(captcha)) {
             redisTemplate.delete(key);
-            JsonData sendCode = notifyService.sendCode(SendCodeEnum.USER_REGISTER, to);
-            return JsonData.buildSuccess();
-
+            JsonData jsonData = notifyService.sendCode(SendCodeEnum.USER_REGISTER, to);
+            return jsonData;
         } else {
             return JsonData.buildResult(BizCodeEnum.CODE_CAPTCHA);
         }
-
 
     }
 

@@ -36,3 +36,11 @@ mybatis-plus:
 logging:
   level:
     root: INFO
+
+#阿里云OSS配置
+aliyun:
+  oss:
+    endpoint: oss-cn-shenzhen.aliyuncs.com
+    access-key-id: LTAI5tNXV1iKq22X54vwLiCD
+    access-key-secret: wQ3YcRJaWnoSr1ztIG3ZynrsKJkYKv
+    bucketname: 1024-shop-xdclass-image
