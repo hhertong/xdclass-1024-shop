@@ -31,13 +31,13 @@ public enum BizCodeEnum {
     ACCOUNT_PWD_ERROR(250003, "账号或者密码错误");
 
     @Getter
-    private String message;
+    private String msg;
 
     @Getter
     private int code;
 
     private BizCodeEnum(int code, String message) {
         this.code = code;
-        this.message = message;
+        this.msg = message;
     }
 }

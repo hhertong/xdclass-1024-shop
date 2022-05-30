@@ -73,6 +73,6 @@ public class JsonData {
      * @return
      */
     public static JsonData buildResult(BizCodeEnum codeEnum) {
-        return JsonData.buildCodeAndMsg(codeEnum.getCode(), codeEnum.getMessage());
+        return JsonData.buildCodeAndMsg(codeEnum.getCode(), codeEnum.getMsg());
     }
 }
