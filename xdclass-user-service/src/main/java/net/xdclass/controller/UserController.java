@@ -5,6 +5,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.xdclass.enums.BizCodeEnum;
+import net.xdclass.request.UserLoginRequest;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.FileService;
 import net.xdclass.service.UserService;
@@ -21,7 +22,6 @@ import org.springframework.web.multipart.MultipartFile;
 public class UserController {
 
 
-
     @Autowired
     private FileService fileService;
 
@@ -31,7 +31,7 @@ public class UserController {
 
     /**
      * 上传用户头像
-     *
+     * <p>
      * 默认最大是1M,超过则报错
      *
      * @param file 文件
@@ -40,30 +40,44 @@ public class UserController {
     @ApiOperation("用户头像上传")
     @PostMapping(value = "upload")
     public JsonData uploadUserImg(
-            @ApiParam(value = "文件上传",required = true)
-            @RequestPart("file") MultipartFile file){
+            @ApiParam(value = "文件上传", required = true)
+            @RequestPart("file") MultipartFile file) {
 
         String result = fileService.uploadUserImg(file);
 
 
-        return result!=null? JsonData.buildSuccess(result):JsonData.buildResult(BizCodeEnum.FILE_UPLOAD_USER_IMG_FAIL);
+        return result != null ? JsonData.buildSuccess(result) : JsonData.buildResult(BizCodeEnum.FILE_UPLOAD_USER_IMG_FAIL);
     }
 
 
     /**
-     *  用户注册
+     * 用户注册
+     *
      * @param registerRequest
      * @return
      */
     @ApiOperation("用户注册")
     @PostMapping("register")
-    public JsonData register(@ApiParam("用户注册对象") @RequestBody UserRegisterRequest registerRequest){
+    public JsonData register(@ApiParam("用户注册对象") @RequestBody UserRegisterRequest registerRequest) {
 
         JsonData jsonData = userService.register(registerRequest);
         return jsonData;
     }
 
+    /**
+     * 用户登录
+     *
+     * @return
+     */
+    @ApiOperation("用户登录")
+    @PostMapping("login")
+    public JsonData login(@ApiParam("用户登录对象")
+                          @RequestBody UserLoginRequest userLoginRequest) {
 
+        JsonData jsonData = userService.login(userLoginRequest);
+
+        return jsonData;
+    }
 
 
 }
