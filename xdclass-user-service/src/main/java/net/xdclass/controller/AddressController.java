@@ -5,14 +5,11 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.xdclass.model.AddressDO;
+import net.xdclass.request.AddressAddRequest;
 import net.xdclass.service.AddressService;
 import net.xdclass.util.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Api(tags = "收货地址模块")
 @RestController
@@ -30,6 +27,18 @@ public class AddressController {
         AddressDO addressDO = addressService.detail(addressId);
 
         return JsonData.buildSuccess(addressDO);
+    }
+
+
+    @ApiOperation("新增收货地址")
+    @PostMapping("add")
+    public JsonData add(@ApiParam("地址对象")
+                        @RequestBody AddressAddRequest addressAddRequest) {
+
+        addressService.add(addressAddRequest);
+
+
+        return JsonData.buildSuccess();
     }
 
 }
