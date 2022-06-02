@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -26,16 +27,19 @@ public class AddressDO implements Serializable {
     /**
      * 用户id
      */
+    @JsonProperty("user_id")
     private Long userId;
 
     /**
      * 是否默认收货地址：0->否；1->是
      */
+    @JsonProperty("default_status")
     private Integer defaultStatus;
 
     /**
      * 收发货人姓名
      */
+    @JsonProperty("receive_name")
     private String receiveName;
 
     /**
@@ -61,8 +65,10 @@ public class AddressDO implements Serializable {
     /**
      * 详细地址
      */
+    @JsonProperty("detail_address")
     private String detailAddress;
 
+    @JsonProperty("create_time")
     private Date createTime;
 
 

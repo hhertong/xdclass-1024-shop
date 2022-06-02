@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -36,6 +37,7 @@ public class UserDO implements Serializable {
     /**
      * 头像
      */
+    @JsonProperty("head_img")
     private String headImg;
 
     /**
@@ -53,6 +55,7 @@ public class UserDO implements Serializable {
      */
     private Integer points;
 
+    @JsonProperty("create_time")
     private Date createTime;
 
     /**

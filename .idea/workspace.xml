@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/vo/UserVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/intercetor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/model/AddressDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/model/AddressDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/model/UserDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/model/UserDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +228,7 @@
       <workItem from="1653993074079" duration="7906000" />
       <workItem from="1654010734697" duration="29000" />
       <workItem from="1654051464446" duration="10746000" />
-      <workItem from="1654134396047" duration="1224000" />
+      <workItem from="1654134396047" duration="3376000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
@@ -303,12 +307,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/UserServiceImpl.java</url>
-          <line>74</line>
+          <line>77</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/UserServiceImpl.java</url>
-          <line>54</line>
+          <line>57</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
