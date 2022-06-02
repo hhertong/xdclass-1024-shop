@@ -1,4 +1,4 @@
-package net.xdclass.intercetor;
+package net.xdclass.interceptor;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import io.jsonwebtoken.Claims;
@@ -10,7 +10,6 @@ import net.xdclass.util.JWTUtil;
 import net.xdclass.util.JsonData;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
