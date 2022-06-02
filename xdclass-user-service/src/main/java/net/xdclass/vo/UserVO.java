@@ -6,7 +6,7 @@ import lombok.Data;
 
 
 @Data
-public class UserVo {
+public class UserVO {
 
     private Long id;
 

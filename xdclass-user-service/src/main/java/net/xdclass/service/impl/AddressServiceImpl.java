@@ -1,6 +1,7 @@
 package net.xdclass.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import io.swagger.annotations.ApiParam;
 import net.xdclass.enums.AddressStatusEnum;
 import net.xdclass.interceptor.LoginInterceptor;
 import net.xdclass.mapper.AddressMapper;
@@ -8,9 +9,13 @@ import net.xdclass.model.AddressDO;
 import net.xdclass.model.LoginUser;
 import net.xdclass.request.AddressAddRequest;
 import net.xdclass.service.AddressService;
+import net.xdclass.util.JsonData;
+import net.xdclass.vo.AddressVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Date;
 
@@ -27,11 +32,18 @@ public class AddressServiceImpl implements AddressService {
      * @return
      */
     @Override
-    public AddressDO detail(Long id) {
+    public AddressVO detail(Long id) {
 
         AddressDO addressDO = addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id));
 
-        return addressDO;
+        if (addressDO == null) {
+            return null;
+        }
+        AddressVO addressVO = new AddressVO();
+        BeanUtils.copyProperties(addressDO, addressVO);
+
+        return addressVO;
+
     }
 
     /**
@@ -62,7 +74,19 @@ public class AddressServiceImpl implements AddressService {
 
         int rows = addressMapper.insert(addressDO);
         return rows;
-
-
     }
+
+    /**
+     * 删除收货地址
+     * @param addressId
+     * @return
+     */
+    @Override
+    public int del(Long addressId) {
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+        int rows = addressMapper.delete(new QueryWrapper<AddressDO>().eq("id", addressId).eq("user_id", loginUser.getId()));
+        return rows;
+    }
+
+
 }

@@ -10,7 +10,7 @@ import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.FileService;
 import net.xdclass.service.UserService;
 import net.xdclass.util.JsonData;
-import net.xdclass.vo.UserVo;
+import net.xdclass.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -88,7 +88,7 @@ public class UserController {
     @GetMapping("detail")
     public JsonData detail() {
 
-        UserVo userVo = userService.findUserDetail();
+        UserVO userVo = userService.findUserDetail();
 
         return JsonData.buildSuccess(userVo);
     }

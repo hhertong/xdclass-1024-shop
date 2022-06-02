@@ -32,7 +32,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             if (StringUtils.isNotBlank(token)) {
                 Claims claims = JWTUtil.checkJWT(token);
                 if (claims == null) {
-                    CommonUtil.sendJsonMessage(response, JsonData.buildResult(BizCodeEnum.ACCOUNT_UNLOGIN));
+                    CommonUtil.sendJsonMessage(response, JsonData.buildResult(BizCodeEnum.ACCOUNT_UNREGISTER));
                     return false;
                 }
 
@@ -54,7 +54,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             log.error("拦截器错误:{}", e);
         }
 
-        CommonUtil.sendJsonMessage(response, JsonData.buildResult(BizCodeEnum.ACCOUNT_UNLOGIN));
+        CommonUtil.sendJsonMessage(response, JsonData.buildResult(BizCodeEnum.ACCOUNT_UNREGISTER));
 
         return false;
     }
