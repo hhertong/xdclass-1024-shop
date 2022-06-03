@@ -37,7 +37,9 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public AddressVO detail(Long id) {
 
-        AddressDO addressDO = addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id));
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+
+        AddressDO addressDO = addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id).eq("user_id", loginUser.getId()));
 
         if (addressDO == null) {
             return null;
