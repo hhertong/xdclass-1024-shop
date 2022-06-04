@@ -8,6 +8,7 @@ import net.xdclass.enums.CouponPublishEnum;
 import net.xdclass.mapper.CouponMapper;
 import net.xdclass.model.CouponDO;
 import net.xdclass.service.CouponService;
+import net.xdclass.util.JsonData;
 import net.xdclass.vo.CouponVO;
 import org.junit.jupiter.api.AfterEach;
 import org.springframework.beans.BeanUtils;
@@ -48,6 +49,18 @@ public class CouponServiceImpl implements CouponService {
         pageMap.put("current_data", couponDOIPage.getRecords().stream().map(obj -> beanProcess(obj)).collect(Collectors.toList()));
 
         return pageMap;
+    }
+
+
+    /**
+     * 领取优惠券
+     * @param couponId
+     * @param promotion
+     * @return
+     */
+    @Override
+    public JsonData addCoupon(long couponId, CouponCategoryEnum promotion) {
+        return null;
     }
 
     private CouponVO beanProcess(CouponDO couponDO) {
