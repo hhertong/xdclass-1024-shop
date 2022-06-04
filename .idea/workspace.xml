@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/CouponApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponRecordMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponRecordDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponRecordMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/AddressController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +110,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-user-service/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -116,16 +125,24 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\resources" />
       <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-user-service\src\main\resources\mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\resources\mapper" />
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\controller" />
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\model" />
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="net.xdclass" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.xdclass" />
       <recent name="net.xdclass.intercepter" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.CouponApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -173,6 +190,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CouponApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="xdclass-coupon-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.xdclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.xdclass.CouponApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="xdclass-user-service" />
       <extension name="coverage">
@@ -197,6 +227,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.CouponApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="JUnit.MailTest.testSendMail" />
         <item itemvalue="JUnit.AddressTest.testAddressDetail" />
@@ -225,7 +256,10 @@
       <workItem from="1654051464446" duration="10746000" />
       <workItem from="1654134396047" duration="3870000" />
       <workItem from="1654167017791" duration="7706000" />
-      <workItem from="1654243607426" duration="2872000" />
+      <workItem from="1654243607426" duration="4921000" />
+      <workItem from="1654262823237" duration="3168000" />
+      <workItem from="1654266491467" duration="661000" />
+      <workItem from="1654307569376" duration="1672000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
