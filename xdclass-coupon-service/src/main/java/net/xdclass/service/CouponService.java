@@ -19,8 +19,8 @@ public interface CouponService {
     /**
      * 领取优惠券
      * @param couponId
-     * @param promotion
+     * @param category
      * @return
      */
-    JsonData addCoupon(long couponId, CouponCategoryEnum promotion);
+    JsonData addCoupon(long couponId, CouponCategoryEnum category);
 }
