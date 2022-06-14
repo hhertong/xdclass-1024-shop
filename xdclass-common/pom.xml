@@ -78,6 +78,13 @@
             <artifactId>jjwt</artifactId>
             <version>0.7.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.17.3</version>
+        </dependency>
+
     </dependencies>
 
 

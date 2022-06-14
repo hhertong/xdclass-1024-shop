@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/mapper/CouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/mapper/CouponRecordMapper.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -263,7 +265,11 @@
       <workItem from="1654307569376" duration="7616000" />
       <workItem from="1654330239408" duration="426000" />
       <workItem from="1654419477092" duration="3251000" />
-      <workItem from="1654425712710" duration="2814000" />
+      <workItem from="1654425712710" duration="3413000" />
+      <workItem from="1654596555746" duration="1503000" />
+      <workItem from="1654678369080" duration="742000" />
+      <workItem from="1655020453126" duration="4000" />
+      <workItem from="1655204325200" duration="5402000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
