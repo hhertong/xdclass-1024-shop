@@ -15,21 +15,29 @@ public class AppConfig {
     @Value("${spring.redis.host}")
     private String redisHost;
 
-    @Value("${spring.redis.post}")
-    private String redisPost;
+    @Value("${spring.redis.port}")
+    private String redisPort;
 
     @Value("${spring.redis.password}")
     private String redisPwd;
 
+
+    /**
+     * 配置分布式锁的redisson
+     *
+     * @return
+     */
     @Bean
     public RedissonClient redissonClient() {
         Config config = new Config();
-        config.useSingleServer()
-                .setPassword(redisPwd)
-                .setAddress("redis://" + redisHost + ":" + redisPost);
+
+        //单机方式
+        config.useSingleServer().setPassword(redisPwd).setAddress("redis://" + redisHost + ":" + redisPort);
+
+        //集群
+        //config.useClusterServers().addNodeAddress("redis://192.31.21.1:6379","redis://192.31.21.2:6379")
 
         RedissonClient redissonClient = Redisson.create(config);
-
         return redissonClient;
     }
 
