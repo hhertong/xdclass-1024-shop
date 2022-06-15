@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponRecordVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -133,6 +135,7 @@
       <recent name="net.xdclass" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.xdclass.vo" />
       <recent name="net.xdclass.enums" />
       <recent name="net.xdclass" />
       <recent name="net.xdclass.intercepter" />
@@ -270,7 +273,7 @@
       <workItem from="1654678369080" duration="742000" />
       <workItem from="1655020453126" duration="4000" />
       <workItem from="1655204325200" duration="5925000" />
-      <workItem from="1655258568694" duration="3461000" />
+      <workItem from="1655258568694" duration="6291000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
@@ -361,11 +364,6 @@
           <url>file://$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/NotifyServiceImpl.java</url>
           <line>109</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
