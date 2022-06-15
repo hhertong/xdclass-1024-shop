@@ -20,6 +20,8 @@ import net.xdclass.service.CouponService;
 import net.xdclass.util.CommonUtil;
 import net.xdclass.util.JsonData;
 import net.xdclass.vo.CouponVO;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,6 +42,9 @@ public class CouponServiceImpl implements CouponService {
 
     @Autowired
     private CouponRecordMapper couponRecordMapper;
+
+    @Autowired
+    private RedissonClient redissonClient;
 
     @Override
     public Map<String, Object> pageCouponActivity(int page, int size) {
@@ -83,38 +88,51 @@ public class CouponServiceImpl implements CouponService {
 
         LoginUser loginUser = LoginInterceptor.threadLocal.get();
 
-        CouponDO couponDO = couponMapper.selectOne(new QueryWrapper<CouponDO>()
-                .eq("id", couponId)
-                .eq("category", category.name()));
+        String lockKey = "lock:coupon:" + couponId;
+
+        RLock rLock = redissonClient.getLock(lockKey);
+        rLock.lock();
+        log.info("加锁成功:{}", Thread.currentThread().getId());
+
+        try {
+
+            CouponDO couponDO = couponMapper.selectOne(new QueryWrapper<CouponDO>()
+                    .eq("id", couponId)
+                    .eq("category", category.name()));
 
 
-        //优惠券是否可以领取
-        this.checkCoupon(couponDO, loginUser.getId());
+            //优惠券是否可以领取
+            this.checkCoupon(couponDO, loginUser.getId());
 
 
-        //构建领劵记录
-        CouponRecordDO couponRecordDO = new CouponRecordDO();
-        BeanUtils.copyProperties(couponDO, couponRecordDO);
-        couponRecordDO.setCreateTime(new Date());
-        couponRecordDO.setUseState(CouponStateEnum.NEW.name());
-        couponRecordDO.setUserId(loginUser.getId());
-        couponRecordDO.setUserName(loginUser.getName());
-        couponRecordDO.setCouponId(couponId);
-        couponRecordDO.setId(null);
+            //构建领劵记录
+            CouponRecordDO couponRecordDO = new CouponRecordDO();
+            BeanUtils.copyProperties(couponDO, couponRecordDO);
+            couponRecordDO.setCreateTime(new Date());
+            couponRecordDO.setUseState(CouponStateEnum.NEW.name());
+            couponRecordDO.setUserId(loginUser.getId());
+            couponRecordDO.setUserName(loginUser.getName());
+            couponRecordDO.setCouponId(couponId);
+            couponRecordDO.setId(null);
 
 
-        //扣减库存  TODO
-        int rows = couponMapper.reduceStock(couponId);
+            //扣减库存  TODO
+            int rows = couponMapper.reduceStock(couponId);
 
-        if (rows == 1) {
-            //库存扣减成功才保存记录
-            couponRecordMapper.insert(couponRecordDO);
+            if (rows == 1) {
+                //库存扣减成功才保存记录
+                couponRecordMapper.insert(couponRecordDO);
 
-        } else {
-            log.warn("发放优惠券失败:{},用户:{}", couponDO, loginUser);
+            } else {
+                log.warn("发放优惠券失败:{},用户:{}", couponDO, loginUser);
 
-            throw new BizException(BizCodeEnum.COUPON_NO_STOCK);
+                throw new BizException(BizCodeEnum.COUPON_NO_STOCK);
+            }
+        } finally {
+            rLock.unlock();
+            log.info("解锁成功");
         }
+
 
         return JsonData.buildSuccess();
     }
