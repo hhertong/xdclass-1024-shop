@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponRecordVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,7 @@
       <workItem from="1654678369080" duration="742000" />
       <workItem from="1655020453126" duration="4000" />
       <workItem from="1655204325200" duration="5925000" />
-      <workItem from="1655258568694" duration="6291000" />
+      <workItem from="1655258568694" duration="7235000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
