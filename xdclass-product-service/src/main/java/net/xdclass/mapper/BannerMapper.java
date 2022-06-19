@@ -2,6 +2,7 @@ package net.xdclass.mapper;
 
 import net.xdclass.model.BannerDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -10,6 +11,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  *
 
  */
+
+@Mapper
 public interface BannerMapper extends BaseMapper<BannerDO> {
 
 }

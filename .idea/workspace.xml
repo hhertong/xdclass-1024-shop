@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/ProductApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/BannerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/BannerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/BannerVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/ProductVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/BannerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/BannerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/BannerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言" value="MySQL" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Tencent Files/2841119399/FileRecv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-product-service/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -118,10 +131,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-product-service\src\main\resources" />
       <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\resources" />
       <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-user-service\src\main\resources\mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-product-service\src\main\java" />
       <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\resources\mapper" />
       <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\controller" />
       <recent name="C:\Users\28411\eclipse-workspace\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\model" />
@@ -132,8 +147,8 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.xdclass.vo" />
-      <recent name="net.xdclass.enums" />
       <recent name="net.xdclass" />
+      <recent name="net.xdclass.enums" />
       <recent name="net.xdclass.intercepter" />
     </key>
   </component>
@@ -144,7 +159,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CouponApplication">
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -205,6 +220,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="xdclass-product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.xdclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.xdclass.ProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="xdclass-user-service" />
       <extension name="coverage">
@@ -229,6 +257,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.CouponApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="JUnit.MailTest.testSendMail" />
@@ -321,7 +350,8 @@
       <workItem from="1655389063206" duration="70000" />
       <workItem from="1655389380282" duration="49000" />
       <workItem from="1655389500714" duration="12000" />
-      <workItem from="1655532991504" duration="5962000" />
+      <workItem from="1655532991504" duration="6607000" />
+      <workItem from="1655621192874" duration="2504000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
@@ -412,6 +442,11 @@
           <url>file://$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/NotifyServiceImpl.java</url>
           <line>109</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/BannerServiceImpl.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
