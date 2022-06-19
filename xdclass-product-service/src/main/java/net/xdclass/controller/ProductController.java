@@ -6,12 +6,9 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.xdclass.service.ProductService;
 import net.xdclass.util.JsonData;
+import net.xdclass.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -31,6 +28,7 @@ public class ProductController {
 
     /**
      * 分页查询列表
+     *
      * @param page
      * @param size
      * @return
@@ -47,6 +45,17 @@ public class ProductController {
         return JsonData.buildSuccess(pageResult);
     }
 
+    @ApiOperation("商品详情")
+    @GetMapping("detail/{product_id}")
+    public JsonData detail(@ApiParam("商品ID")
+                           @PathVariable("product_id") long productId) {
+
+
+        ProductVO productVO = productService.findDetailById(productId);
+
+
+        return JsonData.buildSuccess(productVO);
+    }
 
 }
 

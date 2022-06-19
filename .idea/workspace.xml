@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2f54b4-6d8c-42aa-9f5c-2461cba5353e" name="Default" comment="初始化">
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/ProductApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/BannerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/BannerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/BannerVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/ProductVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/BannerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/BannerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/BannerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +138,7 @@
       <recent name="net.xdclass" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.xdclass.config" />
       <recent name="net.xdclass.vo" />
       <recent name="net.xdclass" />
       <recent name="net.xdclass.enums" />
@@ -351,7 +344,7 @@
       <workItem from="1655389380282" duration="49000" />
       <workItem from="1655389500714" duration="12000" />
       <workItem from="1655532991504" duration="6607000" />
-      <workItem from="1655621192874" duration="2504000" />
+      <workItem from="1655621192874" duration="3934000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1653833580218</created>
